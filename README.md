@@ -39,6 +39,7 @@ Goals:
 - `SharedTaskList`  (exercise)
 - `LambdaRunnableExercise` (exercise)
 - `TaskRegistry` (homework)
+- ` Placeholder`
 
 ## Running demos
 

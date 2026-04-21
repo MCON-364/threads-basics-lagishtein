@@ -38,9 +38,16 @@ public class TaskWorker {
      * Must block until the thread finishes.
      */
     public void run() throws InterruptedException {
-        // TODO: create a thread with the given name that processes every task
-        //       in the list (increment processedCount for each one),
-        //       then start it and join it.
+        Thread workerThread = new Thread(() -> {
+            workerName = Thread.currentThread().getName();
+            for (Task task : tasks) {
+                // Simulate processing the task
+                processedCount++;
+            }
+        }, threadName);
+
+        workerThread.start();
+        workerThread.join();
     }
 
     /** Returns the number of tasks processed by the worker thread. */

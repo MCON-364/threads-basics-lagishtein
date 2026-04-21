@@ -8,13 +8,11 @@ public class ThreadSafeTaskCounter {
 
     private int count;
 
-    public void increment() {
-        // TODO: make this operation thread-safe
+    synchronized public void increment() {
         count++;
     }
 
-    public int getCount() {
-        // TODO: ensure callers see a correct value under concurrent use
+    synchronized public int getCount() {
         return count;
     }
 }
