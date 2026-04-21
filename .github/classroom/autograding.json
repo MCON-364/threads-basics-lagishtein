@@ -59,6 +59,76 @@
       "comparison": "included",
       "timeout": 10,
       "points": 25
+    },
+    {
+      "name": "AtomicTaskCounter",
+      "setup": "",
+      "run": "mvn -B -ntp test -Dtest=AtomicTaskCounterTest",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 20
+    },
+    {
+      "name": "WorkerStartupLatch",
+      "setup": "",
+      "run": "mvn -B -ntp test -Dtest=WorkerStartupLatchTest",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 20
+    },
+    {
+      "name": "PrinterRoom",
+      "setup": "",
+      "run": "mvn -B -ntp test -Dtest=PrinterRoomTest",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 20
+    },
+    {
+      "name": "BatchTaskExecutor",
+      "setup": "",
+      "run": "mvn -B -ntp test -Dtest=BatchTaskExecutorTest",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 20
+    },
+    {
+      "name": "ParallelSumCalculator",
+      "setup": "",
+      "run": "mvn -B -ntp test -Dtest=ParallelSumCalculatorTest",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 20
+    },
+    {
+      "name": "IndependentCounters",
+      "setup": "",
+      "run": "mvn -B -ntp test -Dtest=IndependentCountersTest",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 20
+    },
+    {
+      "name": "ExecutorTaskManager (Homework)",
+      "setup": "",
+      "run": "mvn -B -ntp test -Dtest=ExecutorTaskManagerTest",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 30,
+      "points": 25
     }
   ]
 }

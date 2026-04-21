@@ -2,9 +2,9 @@ package edu.touro.mcon364.concurrency.lesson1.homework;
 
 import edu.touro.mcon364.concurrency.common.model.Task;
 
-import java.util.HashMap;
 import java.util.Map;
 import java.util.Optional;
+import java.util.concurrent.ConcurrentHashMap;
 
 /**
  * Homework:
@@ -19,30 +19,25 @@ import java.util.Optional;
  */
 public class TaskRegistry {
 
-    private final Map<Integer, Task> tasks = new HashMap<>();
+    private final Map<Integer, Task> tasks = new ConcurrentHashMap<>();
 
     public void add(Task task) {
-        // TODO: make thread-safe
         tasks.put(task.id(), task);
     }
 
     public Optional<Task> findById(int id) {
-        // TODO: make thread-safe
         return Optional.ofNullable(tasks.get(id));
     }
 
     public Optional<Task> remove(int id) {
-        // TODO: make thread-safe
         return Optional.ofNullable(tasks.remove(id));
     }
 
     public int size() {
-        // TODO: make thread-safe
         return tasks.size();
     }
 
     public Map<Integer, Task> snapshot() {
-        // TODO: return a defensive copy safely
         return Map.copyOf(tasks);
     }
 }
